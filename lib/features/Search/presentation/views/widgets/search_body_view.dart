@@ -9,24 +9,31 @@ class SearchBodyView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: const [
-          CustomTextField(
-            hint: 'Search',
-          ),
-          SizedBox(height: 16,),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 14),
-            child: Text(
-              'Result',
-              style: styles.textStyle20,
+      body: Padding(
+        padding: const EdgeInsets.only(right: 16, left: 16, top: 50),
+        child: Column(
+          children: const [
+            CustomTextField(
+              hint: 'Search',
             ),
-          ),
-          SizedBox(
-            height: 12,
-          ),
-          SearchResultListView(),
-        ],
+            SizedBox(
+              height: 16,
+            ),
+            Align(
+              alignment: Alignment.topLeft,
+              child: Text(
+                'Result',
+                style: styles.textStyle20,
+              ),
+            ),
+            SizedBox(
+              height: 12,
+            ),
+            Expanded(
+              child: SearchResultListView(),
+            ),
+          ],
+        ),
       ),
     );
   }
