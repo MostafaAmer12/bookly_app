@@ -1,6 +1,6 @@
 import 'package:bookly_app/core/utils/app_routes.dart';
 import 'package:bookly_app/core/utils/styles.dart';
-import 'package:bookly_app/features/Home/presentation/views/widgets/custom_item.dart';
+import 'package:bookly_app/features/Home/presentation/views/widgets/itemBuilder/custom_item.dart';
 import 'package:bookly_app/features/Home/presentation/views/widgets/rating_row.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -11,14 +11,14 @@ class BestSellerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         GoRouter.of(context).push(AppRoutes.kBookDetailsView);
       },
       child: Row(
         children: [
           const SizedBox(
             height: 120,
-            child: CustomItem(),
+            child: CustomItem(imageUrl: 'https://images.theconversation.com/files/45159/original/rptgtpxd-1396254731.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1356&h=668&fit=crop',),
           ),
           const SizedBox(
             width: 30,
@@ -53,7 +53,9 @@ class BestSellerItem extends StatelessWidget {
                       style: styles.textStyle20,
                     ),
                     Spacer(),
-                    RatingRow(mainAxisAlignment: MainAxisAlignment.start,)
+                    RatingRow(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                    )
                   ],
                 ),
               ],

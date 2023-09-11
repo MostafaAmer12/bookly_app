@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CustomItem extends StatelessWidget {
-  const CustomItem({super.key});
+  const CustomItem({super.key, required this.imageUrl});
+
+  final String imageUrl;
 
   @override
   Widget build(BuildContext context) {
@@ -11,10 +13,8 @@ class CustomItem extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
           color: Colors.red,
-          image: const DecorationImage(
-            image: AssetImage(
-              'assets/images/Book.png',
-            ),
+          image: DecorationImage(
+            image: NetworkImage(imageUrl),
             fit: BoxFit.fill,
           ),
         ),

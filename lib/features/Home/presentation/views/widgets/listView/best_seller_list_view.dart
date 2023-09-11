@@ -1,4 +1,4 @@
-import 'package:bookly_app/features/Home/presentation/views/widgets/best_seller_item.dart';
+import 'package:bookly_app/features/Home/presentation/views/widgets/itemBuilder/best_seller_item.dart';
 import 'package:flutter/material.dart';
 
 class BestSellerListView extends StatelessWidget {
@@ -7,8 +7,8 @@ class BestSellerListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      physics: const NeverScrollableScrollPhysics(),
-      padding: EdgeInsets.zero,
+        physics: const NeverScrollableScrollPhysics(),
+        padding: EdgeInsets.zero,
         itemCount: 10,
         itemBuilder: (context, index) {
           return const Padding(

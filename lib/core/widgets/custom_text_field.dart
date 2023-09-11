@@ -19,8 +19,8 @@ class CustomTextField extends StatelessWidget {
             FontAwesomeIcons.magnifyingGlass,
           ),
         ),
-          hintText: hint,
-          border: const OutlineInputBorder(),
+        hintText: hint,
+        border: const OutlineInputBorder(),
       ),
     );
   }

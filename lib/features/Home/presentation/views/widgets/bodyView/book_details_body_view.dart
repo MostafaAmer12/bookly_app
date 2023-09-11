@@ -1,9 +1,9 @@
 import 'package:bookly_app/core/utils/styles.dart';
+import 'package:bookly_app/features/Home/presentation/views/widgets/appBar/custom_details_app_bar.dart';
 import 'package:bookly_app/features/Home/presentation/views/widgets/books_action.dart';
-import 'package:bookly_app/features/Home/presentation/views/widgets/custom_details_app_bar.dart';
-import 'package:bookly_app/features/Home/presentation/views/widgets/custom_item.dart';
+import 'package:bookly_app/features/Home/presentation/views/widgets/itemBuilder/custom_item.dart';
+import 'package:bookly_app/features/Home/presentation/views/widgets/listView/similar_books_list_view.dart';
 import 'package:bookly_app/features/Home/presentation/views/widgets/rating_row.dart';
-import 'package:bookly_app/features/Home/presentation/views/widgets/similar_books_list_view.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsBodyView extends StatelessWidget {
@@ -29,7 +29,10 @@ class BookDetailsBodyView extends StatelessWidget {
                   ),
                   height: MediaQuery.of(context).size.height * 0.30,
                   width: MediaQuery.of(context).size.width * 0.46,
-                  child: const CustomItem(),
+                  child: const CustomItem(
+                    imageUrl:
+                        'https://images.theconversation.com/files/45159/original/rptgtpxd-1396254731.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1356&h=668&fit=crop',
+                  ),
                 ),
                 const SizedBox(
                   height: 22,
