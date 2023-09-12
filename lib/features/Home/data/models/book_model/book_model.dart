@@ -10,7 +10,7 @@ class BookModel extends Equatable {
   final String? id;
   final String? etag;
   final String? selfLink;
-  final VolumeInfo volumeInfo;
+  final VolumeInfo? volumeInfo;
   final SaleInfo? saleInfo;
   final AccessInfo? accessInfo;
   final SearchInfo? searchInfo;
